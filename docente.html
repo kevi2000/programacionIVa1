@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>formulario docentes</title>
+    <link rel="stylesheet" href="diseñodocente.css">
+</head>
+<body>
+    
+    <center>
+        <p>formulario docentes</p>
+        <form method="post">
+           
+            <input pattern="[a-zA-ZñÑ ]{3,65}" required type="text" placeholder="Escalafon">
+             <br><br>
+    
+            <input pattern="[a-zA-ZñÑ ]{3,65}" required type="text" placeholder="Nombre">
+            <br><br>
+    
+            <textarea pattern="[\w]{10,150}" required type="text" placeholder="Direccion"></textarea> 
+            <br><br>
+    
+            <input pattern="[a-zA-ZñÑ ]{3,75}" required type="text" placeholder="correo">
+            <br><br>
+    
+            <input pattern="[a-zA-ZñÑ ]{3,75}" required type="number" placeholder="edad">
+            <br><br>
+    
+            <input pattern="[a-zA-ZñÑ ]{3,75}" required type="tel" placeholder="telefono">
+            <br><br>
+            <input type="button" value="registrar">
+            
+            <input type="submit" value="Guardar">
+    
+        </center>
+    </form>
+    </body>
+    </html>
