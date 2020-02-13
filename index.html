@@ -5,39 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="estilos.css">
-    <title>fromulario alumnos</title>
+    <title>APP ALUMNOS OFFLINE</title>
 </head>
-<body background="imagenes/1.jpg"></body>
-    <center>
-    <p>formulario del alumno</p>
-    <hr><hr>
-    <form method="post">
-       
-        <input pattern="[a-zA-ZñÑ ]{3,65}" required type="text" placeholder="Codigo">
-         <br><br>
-
-        <input pattern="[a-zA-ZñÑ ]{3,65}" required type="text" placeholder="Nombre">
-        <br><br>
-
-        <textarea pattern="[\w]{10,150}" required type="text" placeholder="Direccion"></textarea> 
-        <br><br>
-    
-        <input pattern="[a-zA-ZñÑ ]{3,75}" required type="text" placeholder="carrera">
-        <br><br>
-
-        <input pattern="[a-zA-ZñÑ ]{3,75}" required type="text" placeholder="correo">
-        <br><br>
-
-        <input pattern="[a-zA-ZñÑ ]{3,75}" required type="number" placeholder="edad">
-        <br><br>
-
-        <input pattern="[a-zA-ZñÑ ]{3,75}" required type="tel" placeholder="telefono">
-        <br><br>
-        <input type="button" value="registrar">
-        
-        <input type="submit" value="Guardar">
-
-    </center>
-</form>
+<body>
+    <p>APP ALUMNOS OFFLINE</p>
+    <form method="post" id="frmAlumno">
+        <div class="container">
+            <div class="fila">
+                <input pattern="^[A-Z]{4}[0-9]{6}" required type="text" placeholder="Codigo" id="txtCodigoAlumno">
+            </div>
+            <div required class="fila">
+                <input pattern="[A-Za-zñÑ ]{3,65}" required type="text" placeholder="Nombre" id="txtNombreAlumno">
+            </div>
+            <div class="fila">
+                <input required type="text" placeholder="Direccion" id="txtDireccionAlumno">
+            </div>
+            <div class="fila">
+                <input pattern="[0-9]{4}-[0-9]{4}" required type="text" placeholder="Telefono" id="txtTelefonoAlumno">
+            </div>
+            <div class="fila">
+                <input type="submit" value="Guardar" id="txtGuardarAlumno">
+                <input type="button" id="btnRecuperarAlumnos" value="Recuperar">
+            </div>
+        </div>
+    </form>  
+    <script src="app.js"></script>
 </body>
 </html>
