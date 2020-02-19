@@ -4,40 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="estilos.css">
-    <title>fromulario alumnos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Conversores</title>
 </head>
-<body background="imagenes/1.jpg"></body>
-    <center>
-    <p>formulario del alumno</p>
-    <hr><hr>
-    <form method="post">
-       
-        <input pattern="[a-zA-ZñÑ ]{3,65}" required type="text" placeholder="Codigo">
-         <br><br>
-
-        <input pattern="[a-zA-ZñÑ ]{3,65}" required type="text" placeholder="Nombre">
-        <br><br>
-
-        <textarea pattern="[\w]{10,150}" required type="text" placeholder="Direccion"></textarea> 
-        <br><br>
-    
-        <input pattern="[a-zA-ZñÑ ]{3,75}" required type="text" placeholder="carrera">
-        <br><br>
-
-        <input pattern="[a-zA-ZñÑ ]{3,75}" required type="text" placeholder="correo">
-        <br><br>
-
-        <input pattern="[a-zA-ZñÑ ]{3,75}" required type="number" placeholder="edad">
-        <br><br>
-
-        <input pattern="[a-zA-ZñÑ ]{3,75}" required type="tel" placeholder="telefono">
-        <br><br>
-        <input type="button" value="registrar">
-        
-        <input type="submit" value="Guardar">
-
-    </center>
-</form>
+<body>
+    <form method="post" id="frmConversores">
+        <div class="container">
+            <div class="row row-cols-2">
+                <div class="col text-center bg-info text-white">
+                    APP CONVERSORES
+                </div>
+            </div>
+            <div class="row row-cols-4 p-2">
+                <div class="col">
+                    DE:
+                    <select id="cboDe" class="form-control">
+                        <option value="dolar">Dolar</option>
+                        <option value="euro">Euro</option>
+                        <option value="quetzal">Quetzales</option>
+                        <option value="lempira">Lempiras</option>
+                        <option value="cordoba">Cordobas</option>
+                    </select>
+                </div>
+                <div class="col">
+                    A:
+                    <select id="cboA" class="form-control">
+                        <option value="dolar">Dolar</option>
+                        <option value="euro">Euro</option>
+                        <option value="quetzal">Quetzales</option>
+                        <option value="lempira">Lempiras</option>
+                        <option value="cordoba">Cordobas</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row row-cols-4 p-2">
+                <div class="col text-center">
+                    <input type="text" required="required" pattern="[0-9.]{1,}" placeholder="Cantidad" id="txtCantidadConversor" class="form-control">
+                </div>
+                <div class="col text-center">
+                    <p class="bg-success text-white" id="lblRespuesta">Respuesta: ?</p>
+                </div>
+            </div>
+            <div class="row row-cols-2 p-2">
+                <div class="col text-center">
+                    <input type="submit" id="btnConvertir" value="Convertir" class="btn btn-primary">
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="app.js"></script>
 </body>
 </html>
