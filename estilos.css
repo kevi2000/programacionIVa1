@@ -3,6 +3,18 @@ body{
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+.container > .fila{
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word;
+    
+}
 input, textarea{
     height: 24px;
     border: solid 1px rgb(158, 200, 255);
@@ -28,7 +40,7 @@ input[type=button]:hover{
 input[type=text]:valid, 
 textarea:valid,
 input[type=date]:valid{
-    background-color: rgb(500, 253, 177);
+    background-color: rgb(156, 253, 177);
 }
 input[type=text]:invalid, 
 textarea:invalid,
