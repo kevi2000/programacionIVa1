@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+    <form id="frmDocentes" method="GET">
+
+        <div class="card text-white bg-dark mb-3" style="max-width: 24rem;">
+            <div class="card-header">
+                Mantenimiento Docentes
+    
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="card-body">
+                <div class="row p-2">
+                    <div class="col-4">
+                        NOMBRE
+                    </div>
+                    <div class="col-8">
+                        <input type="text" id="txtNombreDocente" placeholder="AAA AAA" class="form-control">
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col-4">
+                        DIRECCION
+                    </div>
+                    <div class="col-8">
+                        <input type="text" id="txtDireccionDocente" placeholder="AAA" class="form-control">
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col-4">
+                        TEL
+                    </div>
+                    <div class="col-8">
+                        <input type="text" id="txtTelefonoDocente" placeholder="0000-0000" class="form-control">
+                    </div>
+                </div>
+                <div class="row p-2"> 
+                    <div class="col-12 text-center">
+                        <input id="btnGuardarAlumnos" type="submit" class="btn btn-outline-primary text-white" value="Guardar">
+                        <input type="reset" class="btn btn-outline-warning text-white" value="Limpiar">
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col-12 text-center">
+                        <div id="respuestaAlumno"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form> 
+</body>
+</html>
