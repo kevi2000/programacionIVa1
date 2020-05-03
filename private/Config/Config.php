@@ -1,6 +1,6 @@
 <?php
 
 include('../../Conexion/DB.php');
-$conexion = new Conexion('localhost','root','','db_app_academica');
+$conexion = new Conexion('127.0.0.1 ','root','','db_sistemas_peliculas');
 
 ?>
