@@ -4,40 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="estilos.css">
-    <title>fromulario alumnos</title>
+    <link rel="stylesheet" href="public/css/estilos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/vue-select@3.0.0/dist/vue-select.css">
+    <title>APP ACADEMICA</title>
 </head>
-<body background="imagenes/1.jpg"></body>
-    <center>
-    <p>formulario del alumno</p>
-    <hr><hr>
-    <form method="post">
+<body class="bg-secondary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">::.. APP ..::</a>
        
-        <input pattern="[a-zA-ZñÑ ]{3,65}" required type="text" placeholder="Codigo">
-         <br><br>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">INICIO <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mostrar-clientes" data-modulo="clientes" data-form="clientes" href="#">Clientes</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link mostrar-peliculas" data-modulo="peliculas" data-form="peliculas" href="#">Peliculas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mostrar-alquiler" data-modulo="alquiler" data-form="alquiler" href="#">alquiler</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="modulos" id="vista-clientes"></div>
+        <div class="modulos" id="vista-buscar-clientes"></div>
+        <div class="modulos" id="vista-peliculas"></div>
+        <div class="modulos" id="vista-buscar-peliculas"></div>
+        <div class="modulos" id="vista-alquiler"></div>
+        <div class="modulos" id="vista-buscar-alquiler"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="public/js/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type="module" src="public/js/app.js"></script>
+    <script src="https://unpkg.com/vue-select@3.0.0"></script>
 
-        <input pattern="[a-zA-ZñÑ ]{3,65}" required type="text" placeholder="Nombre">
-        <br><br>
-
-        <textarea pattern="[\w]{10,150}" required type="text" placeholder="Direccion"></textarea> 
-        <br><br>
-    
-        <input pattern="[a-zA-ZñÑ ]{3,75}" required type="text" placeholder="carrera">
-        <br><br>
-
-        <input pattern="[a-zA-ZñÑ ]{3,75}" required type="text" placeholder="correo">
-        <br><br>
-
-        <input pattern="[a-zA-ZñÑ ]{3,75}" required type="number" placeholder="edad">
-        <br><br>
-
-        <input pattern="[a-zA-ZñÑ ]{3,75}" required type="tel" placeholder="telefono">
-        <br><br>
-        <input type="button" value="registrar">
-        
-        <input type="submit" value="Guardar">
-
-    </center>
 </form>
 </body>
 </html>
