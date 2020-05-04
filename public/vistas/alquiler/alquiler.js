@@ -6,7 +6,7 @@ var appalquiler = new Vue({
         alquiler:{
             idAlquiler : 0,
             accion    : 'nuevo',
-            cliente   : {
+            cliente  : {
                 idCliente : 0,
                 cliente   : ''
             },
@@ -19,8 +19,8 @@ var appalquiler = new Vue({
             valor : '',
             msg       : ''
         },
-        cliente : {},
-        pelicula  : {}
+        clientes : {},
+        peliculas  : {}
     },
     methods:{
         guardarMatriculas(){
@@ -36,8 +36,8 @@ var appalquiler = new Vue({
     },
     created(){
         fetch(`private/Modulos/alquiler/procesos.php?proceso=traer_periodos_alumnos&matricula=''`).then( resp=>resp.json() ).then(resp=>{
-            this.cliente = resp.cliente;
-            this.pelicula = resp.pelicula;
+            this.peliculas = resp.peliculas
+            this.clientes = resp.clientes
         });
     }
 });

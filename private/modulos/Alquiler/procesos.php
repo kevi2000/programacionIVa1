@@ -95,16 +95,16 @@ class matricula{
     }
     public function traer_periodos_alumnos(){
         $this->db->consultas('
-            select peliculas.sinopsis AS label, peliculas.idPeliculas AS id
-            from peliculas
-        ');
-        $periodos = $this->db->obtener_data();
-        $this->db->consultas('
-            select clientes.nombre AS label, clientes.idCliente AS id
-            from clientes
-        ');
-        $alumnos = $this->db->obtener_data();
-        return $this->respuesta = ['peliculas'=>$periodos, 'clientes'=>$alumnos ];//array de php en v7+
+        select clientes.nombre AS label, clientes.idCliente AS id
+        from clientes
+    ');
+    $cliente = $this->db->obtener_datos();
+    $this->db->consultas('
+        select peliculas.descripcion AS label, peliculas.idPelicula AS id
+        from peliculas
+    ');
+    $pelicula = $this->db->obtener_datos();
+    return $this->respuesta = ['clientes'=>$cliente, 'peliculas'=>$pelicula ];//array de php en v7+
     }
     public function eliminarMatricula($idMatricula = 0){
         $this->db->consultas('
