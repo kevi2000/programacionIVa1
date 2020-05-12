@@ -1,0 +1,1 @@
+&copy; Technological sword 2016 - Todos los derechos reservados

@@ -1,0 +1,1 @@
+&copy; ProvocArte 2020 - Todos los derechos reservados

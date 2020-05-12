@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>ProvocArte</title>
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body>
+        <div class="cod-container">
+            <div class="form-header">
+                <img src="img/Logo.png" alt="Logo de ProvocArte">
+                <h1>Provoc<span>Arte</span></h1>
+            </div>
+    
+            <div class="form-content">
+                <form method="post" action="login.php" class="cod-form">
+                    <div class="form-title">
+                        <label>Inicio de Seción</label>
+                    </div>
+    
+                    <div class="input-group">
+                    </td><td><label>Correo de Usuario</label></td></tr>
+                    <tr><td><input type="email" name="txtusuario"/></td></tr>
+                    </div>
+    
+                    <div class="input-group">
+                        <tr><td><label>Contraseña</label></td></tr>
+                        <tr><td><input type="password" name="txtpassword" /> </td></tr>
+                    </div>
+    
+                    <div class="input-group">
+                        <tr><td><input type="submit" value="Ingresar" /> </td></tr>
+                        <p>No tienes cuenta? <a href="#" class="alt-form">Ingresa aquí</a></p>
+                    </div>
+                   
+                </form>
+            </div>
+    
+            
+            <div class="form-content">
+                <form action="registro.php" method="POST" class="cod-form">
+                    <div class="form-title">
+                        <h3>Regístrate Gratis</h3>
+                    </div>
+    
+                    <div class="input-group">
+                    </td><td><label>Correo de Usuario</label></td></tr>
+                    <tr><td><input type="email" name="usuario"/></td></tr>
+                    </div>
+    
+                    <div class="input-group">
+                        <tr><td><label>Contraseña</label></td></tr>
+                        <tr><td><input type="password" name="password" /> </td></tr>
+                    </div>
+    
+                    <div class="input-group">
+                        <tr><td><label>Repita Contraseña</label></td></tr>
+                        <tr><td><input type="password" name="password2" /> </td></tr>
+                    </div>
+    
+                    <div class="input-group">
+                        <tr><td><input type="submit" value="Registrarse" /> </td></tr>
+                        <p>Ya tienes cuenta? <a href="#" class="alt-form">Ingresa aquí</a></p>
+                    </div>
+                   
+                </form>
+            </div>
+        </div>
+    
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/form.js"></script>
+    </body>
+</html>
