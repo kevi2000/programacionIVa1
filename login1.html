@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ProvocArte</title>
+    <link rel="stylesheet" href="https://unpkg.com/vue-select@latest/dist/vue-select.css">
+    <!-- Alert -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -15,18 +25,18 @@
         </div>
 
         <div class="form-content">
-            <form method="post" action="login.php" class="cod-form">
+            <form method="POST"  class="cod-form" id="frmLogin" data-accion="login"  v-on:submit.prevent="validarDatosUsuario">
                 <div class="form-title">
                     <label>Inicio de Seción</label>
                 </div>
 
                 <div class="input-group">
-                    <input type="email" class="form-input" name="form-input" name="txtusuario"/>
-                    <label class="label" for="correo">Usuario</label>
+                    <input type="email" class="form-input" v-model="login.correo" name="form-input" id="correo" name="txtcorreo"/>
+                    <label class="label" for="correo">Correo</label>
                 </div>
 
                 <div class="input-group">
-                    <input type="password" class="form-input" name="form-input" name="txtpassword" />
+                    <input type="password" class="form-input" name="form-input" v-model="login.contraseña"  id="contraseña" name="txtpassword" />
                     <label class="label" for="pass">Password</label>
                 </div>
 
@@ -40,23 +50,29 @@
 
         
         <div class="form-content">
-            <form action="#" class="cod-form">
+            <form method="GET" class="cod-form" id="frmRegistrarse" v-on:submit.prevent="guardarRegistro" data-accion="nuevo">
                 <div class="form-title">
                     <h3>Regístrate Gratis</h3>
                 </div>
 
                 <div class="input-group">
-                    <input type="email" class="form-input" name="form-input" id="reg-correo">
-                    <label class="label" for="reg-correo">Correo</label>
+                    <input type="email" class="form-input" name="form-input" v-model="nuevo.correo" id="correoNew">
+                    <label class="label" for="reg-correo" >Correo</label>
                 </div>
 
                 <div class="input-group">
-                    <input type="password" class="form-input" name="form-input" id="reg-pass">
+                    <input type="text" class="form-input" name="form-input" v-model="nuevo.usuario" id="usuarioNew">
+                    <label class="label" for="reg-usuario">Usuario</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" class="form-input" name="form-input" v-model="nuevo.contraseña" id="pass1New">
                     <label class="label" for="reg-pass">Contraseña</label>
                 </div>
 
+
+
                 <div class="input-group">
-                    <input type="password" class="form-input" name="form-input" id="reg-rep-pass">
+                    <input type="password" class="form-input" name="form-input"  v-model="nuevo.contraseña2"id="pass2New">
                     <label class="label" for="reg-rep-pass">Repetir Contraseña</label>
                 </div>
 
@@ -70,6 +86,28 @@
     </div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- JQuery UI -->
+
+    <!-- Vue JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <!-- JS -->
+
+
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+    <!-- Vue Select -->
+
+    <script src="https://unpkg.com/vue-select@latest"></script>
     <script src="js/form.js"></script>
+
+
 </body>
 </html>

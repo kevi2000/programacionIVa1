@@ -2,10 +2,6 @@
 
 <html>
 
-
-
-
-
 <link rel="stylesheet" type="text/css" href="css/Fronedn.css">
 
 <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
@@ -18,6 +14,19 @@
 
 <title>ProvocArt</title>
 
+<link rel="stylesheet" href="https://unpkg.com/vue-select@latest/dist/vue-select.css">
+<!-- Alert -->
+<!-- CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+<!-- Semantic UI theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 <script src="js/bjqs.min.js"></script>
@@ -41,8 +50,6 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 </head>
-
-
 
 <body>
 
@@ -85,7 +92,7 @@
   </li>
   
     <li><a href="misionyvision.html">  Misión y visión </a></li>
-    <li><a href="login.html">  Deslogueo </a></li>
+    <li><a  onclick="cerrarSesion()" href="#">  Deslogueo </a></li>
 
  
 
@@ -129,19 +136,61 @@
 
 <h1>Misión</h1>
 
+
+Somos una empresa diseñada para ayudar a resaltar la belleza de las mujeres y hombres, ofreciendo una gran variedad de productos desarrollados por  personal calificado apoyados en tecnología de vanguardia, logrando así sobrepasar  los estándares de calidad exigidos  por el mercado nacional e internacional, superando a nuestros competidores  teniendo una relación integral con nuestros clientes y medio ambiente  proyectando valores a nuestra comunidad, garantizando la satisfacción de nuestros consumidores y un adecuado crecimiento.
 <br>
 
  </br>
-
-Somos una empresa diseñada para ayudar a resaltar la belleza de las mujeres y hombres, ofreciendo una gran variedad de productos desarrollados por  personal calificado apoyados en tecnología de vanguardia, logrando así sobrepasar  los estándares de calidad exigidos  por el mercado nacional e internacional, superando a nuestros competidores  teniendo una relación integral con nuestros clientes y medio ambiente  proyectando valores a nuestra comunidad, garantizando la satisfacción de nuestros consumidores y un adecuado crecimiento.
 
 <h1>Visión</h1>
 
+
+Mantenernos en  la preferencia del consumidor teniendo una posición de liderazgo, desarrollo y compromiso aumentando y capacitando a nuestro valioso Capital humano generando una gama de productos innovadores manteniendo la calidad a través de la mejora continua.
+
 <br>
 
  </br>
+<div>
 
-Mantenernos en  la preferencia del consumidor teniendo una posición de liderazgo, desarrollo y compromiso aumentando y capacitando a nuestro valioso Capital humano generando una gama de productos innovadores manteniendo la calidad a través de la mejora continua.
+  <div class="container chat-cont" id="frmChat" >
+    <div class="msg-cabezera">
+        <div class="img-perfil-cabezera">
+        </div>
+        <div class="activa">
+            <h4 id="nombreSala">Chat exclusivo para usuarios</h4>
+        </div>
+    </div>
+    
+    <div class="cuerpo-chat" >
+        <div class="msg-imbox">
+            <div class="chats">
+
+
+
+
+                <main  style="height: 35vh; overflow-y: scroll;" id="contenidoChat" >
+                
+                
+                
+                </main>
+
+
+
+            </div>
+        </div>
+    
+            <form class="msg-botones" v-on:submit.prevent="enviarMensaje" >
+                <div class="input-group">
+                    <input type="text" class="form-control " placeholder="Envia un mensaje..." id="inputMsg">
+                    <div class="input-group-append">
+                        <button type="submit" class="input-group-text" > <i class="fa fa-paper-plane" ></i></button>
+                    </div>
+                </div>
+            </form>
+    
+    </div>
+ </div>
+</div>
 
 </div>
 
@@ -150,6 +199,8 @@ Mantenernos en  la preferencia del consumidor teniendo una posición de liderazg
  <div class="sidebar1">
 
  </div>
+
+
 
  <div class="content"></div>
 
@@ -163,7 +214,14 @@ Mantenernos en  la preferencia del consumidor teniendo una posición de liderazg
 
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script src="https://kit.fontawesome.com/2f2a4cd560.js" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
+<script src="js/app.js"></script>
+<!-- JS -->
 
 </body>
 

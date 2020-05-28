@@ -55,12 +55,127 @@ color: #000;
 text-decoration: none;
 opacity:.75;
  
-transition:color .5s ease, background .5s ease;
--webkit-transition:color .5s ease, background .5s ease;
--moz-transition:color .5s ease, background .5s ease;
--o-transition:color .5s ease, background .5s ease;
+transition:color .5s ease; background: .5s ease;
+-webkit-transition:color .5s ease; background: .5s ease;
+-moz-transition:color .5s ease; background: .5s ease;
+-o-transition:color .5s ease; background: .5s ease;
 }
 ul.bjqs-controls.v-centered li a:hover{
     background:#000;
     color:#fff;
+}
+
+.chat-cont
+  {
+	max-width: 80% !important;
+	max-height: 80% !important;
+    margin: auto;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+  }
+
+
+
+
+
+
+.activa
+{
+  justify-content: center;
+}
+  .activa h4
+  {
+    font-size: 30px;
+    margin-left: 10px;
+	justify-content: center;
+  }
+
+  .cuerpo-chat
+  {
+    padding: 0 0 50px 0;
+  }
+  .msg-imbox
+  {
+    border: 1px solid #ccc;
+    overflow: hidden;
+    padding-bottom: 30px;
+  }
+  .chats
+  {
+    padding: 30px 15px 0 25px;
+  }
+ 
+  .reciv-chat-img
+  {
+    display: inline-block;
+    width: 20px;
+    float: left;
+  }
+.reciv-msg
+{
+  display: inline-block;
+  padding: 0 0 0 10px;
+  vertical-align: top;
+  width: 92%;
+}
+.reciv-msginbox
+{
+  width: 57%;
+} 
+.reciv-msginbox p
+{
+  background:  #efefef none repeat scroll 0 0;
+  border-radius: 10px;
+  color: #646464;
+  font-size: 14px;
+  margin: 0;
+  padding: 5px 10px 5px 12px;
+  width: 100%;
+}
+
+.env-chat
+{
+  overflow: hidden;
+  margin: 26px 20px;
+}
+.env-msg p
+{
+  background: #007bff none repeat scroll 0 0;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  margin: 0;
+  padding: 5px 10px 5px 12px;
+  width: 100%;
+  
+}
+.env-msg
+{
+  float: left;
+  width: 46%;
+  margin-left: 45%;
+}
+.env-chat-img
+{
+  display: inline-block;
+  width: 20px;
+  float: right;
+}
+
+.input-group-text
+{
+  background-color: #007bff;
+  color: #fff;
+}
+
+
+
+
+.user
+{
+  
+  color: #000;
+  font-size: 8px;
+  margin: 2px 0 0;
+
 }
