@@ -77,6 +77,7 @@ revMesg = [],
    socket.on('recibirMensaje',msg=>{
         revMesg = msg;
         console.log(msg);
+        $.notification("mensajes ...",msg,'https://www.tuexpertoapps.com/wp-content/uploads/2018/06/mensajes-android-950x675.jpg.webp');
     });
 
     
