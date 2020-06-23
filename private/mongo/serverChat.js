@@ -24,10 +24,9 @@ io.on('connection', socket => {
             db.collection('chat').find({}).toArray((err, datas) => {
                 io.emit('historial', datas);
             });
-            console.log(err);
         });
     });
 });
 http.listen(3001, () => {
-    console.log('Escuchando peticiones por el puerto 3001, okey');
+    console.log('Escuchando peticiones por el puerto 3001, bien');
 });
